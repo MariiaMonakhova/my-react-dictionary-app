@@ -24,15 +24,19 @@ export default function Search() {
 
   return (
     <div className="Search">
-      <form className="search-form" onSubmit={search}>
-        <input
-          type="search"
-          placeholder="Search your word here"
-          autoFocus={true}
-          onChange={handleWordChange}
-        />
-        <input type="submit" value="🔍" />
-      </form>
+      <section>
+        <form className="search-form" onSubmit={search}>
+          <input
+            type="search"
+            placeholder="Search your word here"
+            onChange={handleWordChange}
+            className="search-area"
+          />
+          <button type="submit" className="submit-area">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </section>
       <Results data={result} />
     </div>
   );

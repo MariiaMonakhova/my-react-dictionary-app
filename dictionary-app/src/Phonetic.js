@@ -10,7 +10,6 @@ export default function Phonetic(props) {
           <code>audio</code> element.
         </audio>
       </figure>
-
       {props.phonetic.text}
     </div>
   );

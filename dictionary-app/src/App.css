@@ -7,3 +7,24 @@
   font-size: 88px;
   font-family: "Montserrat", sans-serif;
 }
+
+@media (max-width: 1000px) {
+  .App header {
+    margin-top: 150px;
+  }
+  .App h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App header {
+    margin-top: 110px;
+  }
+  .App h1 {
+    font-size: 48px;
+  }
+  .App .container {
+    margin: 0px 8px 0 8px;
+  }
+}
