@@ -9,7 +9,7 @@ export default function App() {
           <h1>Dictionary</h1>
         </header>
         <main>
-          <Search defaultKeyword="yoga" />
+          <Search defaultKeyword="beautiful" />
         </main>
         <footer>
           <p>

@@ -1,19 +1,13 @@
 import React from "react";
+import "./Phonetic.css";
 
 export default function Phonetic(props) {
-  if (props.phonetic.audio) {
-    return (
-      <div className="phonetic">
-        <p>{props.phonetic.text}</p>
-        <figure className="mt-2">
-          <audio controls src={props.phonetic.audio}>
-            Your browser does not support the
-            <code>audio</code> element.
-          </audio>
-        </figure>
-      </div>
-    );
-  } else {
-    return <p>{props.phonetic.text}</p>;
-  }
+  return (
+    <div className="phonetic mt-3">
+      <a href={props.phonetic.audio} target="_blank" className="mt-2">
+        PLAY
+      </a>
+      <span>{props.phonetic.text}</span>
+    </div>
+  );
 }
