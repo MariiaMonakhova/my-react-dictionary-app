@@ -1,7 +1,45 @@
+.Search {
+  font-family: "Cabin", sans-serif;
+}
+.synonyms li {
+  display: inline-block;
+  margin: 10px 15px 0 0;
+  margin-bottom: 0;
+  border: 1px solid #e7e7e7;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #e7e7e7;
+}
+.synonyms ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.definition {
+  font-size: 20px;
+}
 .search-form {
   display: block;
   margin: 10px auto;
   text-align: center;
+  margin-bottom: 80px;
+}
+h2 {
+  font-size: 56px;
+  font-weight: bold;
+}
+h4 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #707070;
+  font-weight: bold;
+  font-style: italic;
+}
+.phonetic p {
+  color: #45171d;
+}
+p {
+  font-size: 24px;
 }
 form .search-area {
   width: 753px;
@@ -31,7 +69,26 @@ button {
   color: white;
 }
 
+section {
+  border: 2px solid #bdbdbd;
+  border-radius: 20px;
+  padding: 30px 40px;
+  margin-bottom: 20px;
+}
+.Synonims li {
+  padding: 10px;
+}
+
 @media (max-width: 1000px) {
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  section {
+    padding: 15px 20px;
+  }
   .search-form {
     margin: 20px auto;
   }
@@ -72,6 +129,6 @@ button {
     border-top-right-radius: 8px;
   }
   .fa-solid {
-    font-size: 20px;
+    font-size: 15px;
   }
 }

@@ -5,8 +5,8 @@ import Phonetic from "./Phonetic";
 export default function Results(props) {
   if (props.data) {
     return (
-      <div className="results">
-        <section>
+      <div className="col-7">
+        <div className="results">
           <h2>{props.data.word}</h2>
           {props.data.phonetics?.map(function (phonetic, index) {
             return (
@@ -15,14 +15,15 @@ export default function Results(props) {
               </div>
             );
           })}
-        </section>
-        {props.data.meanings?.map(function (meanings, index) {
-          return (
-            <section key={index}>
-              <Meaning meanings={meanings} />
-            </section>
-          );
-        })}
+
+          {props.data.meanings?.map(function (meanings, index) {
+            return (
+              <section key={index}>
+                <Meaning meanings={meanings} />
+              </section>
+            );
+          })}
+        </div>
       </div>
     );
   } else {
