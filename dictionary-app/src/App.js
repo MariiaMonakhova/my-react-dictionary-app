@@ -15,7 +15,7 @@ export default function App() {
           <p>
             This app is coded by Mariia Monakhova and is{" "}
             <a href="https://github.com/MariiaMonakhova/my-react-dictionary-app">
-              open-soursed
+              open-sourced
             </a>
           </p>
         </footer>

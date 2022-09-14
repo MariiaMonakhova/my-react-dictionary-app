@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Search(props) {
   const [word, setWord] = useState(props.defaultKeyword);
   const [result, setResult] = useState({});
   let [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
   function handleDictionaryResponse(response) {
-    console.log(response.data[0]);
     setResult(response.data[0]);
   }
 
   function handlePexelsResponse(response) {
-    console.log(response);
+    console.log(response.data);
+    setPhotos(response.data.photos);
   }
 
   function search() {
@@ -23,7 +25,7 @@ export default function Search(props) {
 
     let pexelsApiKey =
       "563492ad6f91700001000001dda8472879e44fb6bb2897e624627398";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=1`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=4`;
     axios
       .get(pexelsApiUrl, {
         headers: { Authorization: `Bearer ${pexelsApiKey}` },
@@ -58,8 +60,14 @@ export default function Search(props) {
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
-
-        <Results data={result} />
+        <div className="row">
+          <div className="col-md-7">
+            <Results data={result} />
+          </div>
+          <div className="col-md-5">
+            <Photos photos={photos} />
+          </div>
+        </div>
       </div>
     );
   } else {
