@@ -11,6 +11,7 @@
   border-radius: 8px;
   background: #e7e7e7;
 }
+
 .synonyms ul {
   padding: 0;
   margin: 0;
@@ -78,10 +79,19 @@ section {
 .Synonims li {
   padding: 10px;
 }
+.example {
+  color: #707070;
+  font-style: italic;
+  font-size: 20px;
+}
 
 @media (max-width: 1000px) {
   h2 {
     font-size: 40px;
+  }
+  h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
   }
   p {
     font-size: 16px;
@@ -111,6 +121,19 @@ section {
   }
 }
 @media (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .definition {
+    font-size: 16px;
+  }
+  .example {
+    font-size: 16px;
+  }
   .search-form {
     margin: 15px 0px;
   }

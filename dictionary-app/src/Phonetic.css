@@ -27,3 +27,8 @@
 .phonetic p {
   color: #45171d;
 }
+@media (max-width: 600px) {
+  .phonetic a {
+    padding: 7px 20px;
+  }
+}

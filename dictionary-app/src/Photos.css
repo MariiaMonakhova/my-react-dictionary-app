@@ -3,11 +3,13 @@ img {
   width: 500px;
   margin-left: 50px;
   margin-bottom: 60px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 900px) {
   img {
     margin-left: 0;
+    width: 400px;
+    margin-bottom: 30px;
   }
 }
